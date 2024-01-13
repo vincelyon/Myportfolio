@@ -7,7 +7,7 @@ import { useForm } from '@formspree/react'
 
 const Contact = () => {
 
-        const [state, handleSubmit] = useForm("xbjedjzo");
+        const [state, handleSubmit] = useForm("mnqendvv");
         if (state.succeeded) {
             return <p>Thanks For Reaching out. We will get back to you</p>;
         }
