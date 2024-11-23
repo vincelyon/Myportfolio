@@ -36,7 +36,7 @@ const About = () => {
                             <FiUsers className='about__icon'/>
                             <h5>Projects</h5>
                             <small>
-                                <a href="#"target='blank'>Click Me</a>
+                                <a href="#portfolio"target='blank'>Click Me</a>
                             </small>
                         </article>
                     </div>

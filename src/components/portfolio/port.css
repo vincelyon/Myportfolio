@@ -1,0 +1,129 @@
+.portfolio__item-image-resized {
+    width: 70%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.portfolio__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.portfolio__item {
+    flex: 1 1 calc(50% - 20px);
+    background: #ffffff00;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio__item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio__item-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.portfolio__item-image h3, .portfolio__item-image p {
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.portfolio__item:hover .portfolio__item-image h3,
+.portfolio__item:hover .portfolio__item-image p {
+    opacity: 1;
+}
+
+.portfolio__item-buttons {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background: #ffffff00;
+}
+
+.btn {
+    margin: 0 10px;
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #0056b3, #007bff);
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #28a745, #218838);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #218838, #28a745);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .portfolio__item {
+        flex: 1 1 calc(100% - 20px);
+    }
+
+    .portfolio__item-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio__item-image {
+        height: 180px;
+    }
+}
+
+.portfolio__item-description {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.portfolio__item-details {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
+
+.portfolio__item-description {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.portfolio__item-buttons {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
