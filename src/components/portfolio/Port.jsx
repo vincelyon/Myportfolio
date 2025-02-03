@@ -54,7 +54,7 @@ const Port = () => {
                     <div className="portfolio__item-details">
                         <p className="portfolio__item-description">A Massage website showcasing its pricing and services.</p>
                         <div className="portfolio__item-buttons">
-                            <a href="https://github.com/vincelyon/GIMTECH" rel="noreferrer" className='btn' target="_blank">Github</a>
+                            <a href="https://github.com/vincelyon/Touchofclass" rel="noreferrer" className='btn' target="_blank">Github</a>
                             <a href="https://www.touchofclassmasssagecenter.com/" rel="noreferrer" className='btn btn-primary' target="_blank">Live Demo</a>
                         </div>
                     </div>
