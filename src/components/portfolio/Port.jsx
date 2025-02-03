@@ -2,6 +2,9 @@ import React from 'react'
 import './port.css'
 import blac from '../../assets/blac.png'
 import Gim from '../../assets/Gimtech.png'
+import mokorro from '../../assets/mokorro.png'
+import touch from '../../assets/Touchofclass.png'
+
 const Port = () => {
     return(
         <section id='portfolio'>
@@ -10,7 +13,7 @@ const Port = () => {
 
             <div className="container portfolio__container">
                 <article className="portfolio__item">
-                    <div className="portfolio__item-image" style={{ backgroundImage: `url(${blac})` }}>
+                    <div className="portfolio__item-image" style= {{ backgroundImage: `url(${blac})` }}>
                         <h3>Blac Official</h3>
                     </div>
                     <div className="portfolio__item-details">
@@ -30,6 +33,29 @@ const Port = () => {
                         <div className="portfolio__item-buttons">
                             <a href="https://github.com/vincelyon/GIMTECH" rel="noreferrer" className='btn' target="_blank">Github</a>
                             <a href="https://gimtech.vercel.app/" rel="noreferrer" className='btn btn-primary' target="_blank">Live Demo</a>
+                        </div>
+                    </div>
+                </article>
+                <article className="portfolio__item">
+                    <div className="portfolio__item-image" style={{ backgroundImage: `url(${mokorro})` }}>
+                        <h3>MOKORRO HOTEL</h3>
+                    </div>
+                    <div className="portfolio__item-details">
+                        <p className="portfolio__item-description">A Hotel website showcasing the hospitality of Mokorro hotel</p>
+                        <div className="portfolio__item-buttons">
+                            <a href="https://www.mokorrohotel.com/" rel="noreferrer" className='btn btn-primary' target="_blank">Live Demo</a>
+                        </div>
+                    </div>
+                </article>
+                <article className="portfolio__item">
+                    <div className="portfolio__item-image" style={{ backgroundImage: `url(${touch})` }}>
+                        <h3>TOUCH OF CLASS</h3>
+                    </div>
+                    <div className="portfolio__item-details">
+                        <p className="portfolio__item-description">A Massage website showcasing its pricing and services.</p>
+                        <div className="portfolio__item-buttons">
+                            <a href="https://github.com/vincelyon/GIMTECH" rel="noreferrer" className='btn' target="_blank">Github</a>
+                            <a href="https://touchofclassmasssagecenter.com/" rel="noreferrer" className='btn btn-primary' target="_blank">Live Demo</a>
                         </div>
                     </div>
                 </article>
