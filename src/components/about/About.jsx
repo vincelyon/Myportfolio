@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './about.css'
-import Me from '../../assets/c.jpeg'
+import Me from '../../assets/vinabout.jpg'
 import {BiTime} from 'react-icons/bi'
 import {FiUsers} from 'react-icons/fi'
 import {AiFillFolderOpen} from 'react-icons/ai'
+import PortfolioModal from '../portfolio/PortfolioModal'
 
 const About = () => {
+    const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
+
     return(
         <section id='about'>
             <h5>Get to know</h5>
@@ -32,20 +35,23 @@ const About = () => {
                                 <a href="https://github.com/vincelyon" target='blank'>Click Me</a>
                             </small>
                         </article>
-                        <article className='about__card'>
+                        <article className='about__card' onClick={() => setIsPortfolioOpen(true)}>
                             <FiUsers className='about__icon'/>
                             <h5>Projects</h5>
-                            <small>
-                                <a href="#portfolio"target='blank'>Click Me</a>
-                            </small>
+                            <small>View Projects</small>
                         </article>
                     </div>
 
-                    <p>I'm a dedicated software engineer(full stack developer) with expertise in JavaScript, Python, React, and Next.js. I excel in crafting scalable solutions and value clean, quality code. Collaborative environments drive me, enabling me to deliver exceptional results. Beyond work, I engage in tech meetups, contribute to open-source projects, and pursue continuous learning.</p>
+                    <p>I'm a Full-Stack Developer driven by a single mission: transforming complex challenges into elegant, user-centric digital experiences. With a robust toolkit featuring Java, JavaScript, Python, React, java and Next.js, I don't just write code—I architect robust and scalable solutions. My philosophy is built on the foundation of clean, maintainable code, because I believe the best products are not only powerful on the outside but beautifully crafted on the inside. I thrive in collaborative settings where collective creativity turns ambitious ideas into reality. My curiosity doesn't stop when the workday ends; I'm constantly exploring new technologies, contributing to open-source, and connecting with the vibrant tech community.</p>
 
-                    <a href="#contact" className="btn btn-primary">Contact Me</a>
+                    <a href="#contact" className="btn btn-primary">Lets Talk</a>
                 </div>
             </div>
+
+            <PortfolioModal 
+                isOpen={isPortfolioOpen} 
+                onClose={() => setIsPortfolioOpen(false)} 
+            />
         </section>
     )
 }

@@ -1,129 +1,172 @@
-.portfolio__item-image-resized {
-    width: 70%;
-    height: 50%;
-    object-fit: cover;
-}
+/* =================== PORTFOLIO =================== */
 
 .portfolio__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
+    display: grid;
+    /* Create responsive columns: 1 for mobile, 2 for tablet, 3 for desktop */
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
 }
 
 .portfolio__item {
-    flex: 1 1 calc(50% - 20px);
-    background: #ffffff00;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-    display: flex;
+    background: var(--color-bg-variant);
+    padding: 1rem;
+    border-radius: 1.5rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    display: flex; /* Use flexbox for better alignment */
     flex-direction: column;
+    justify-content: space-between; /* Pushes CTA to the bottom */
 }
 
 .portfolio__item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    border-color: var(--color-primary-variant);
+    background: transparent;
+    transform: translateY(-5px); /* Subtle lift effect */
 }
 
 .portfolio__item-image {
-    height: 250px;
-    background-size: cover;
-    background-position: center;
-    color: white;
+    border-radius: 1rem;
+    overflow: hidden; /* This is key for the image zoom effect */
+    height: 220px; /* Increased height */
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.portfolio__item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    transition: var(--transition);
+}
+
+.portfolio__item:hover .portfolio__item-image img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.portfolio__item-content {
+    flex-grow: 1; /* Allows this section to fill available space */
+}
+
+.portfolio__item h3 {
+    margin: 0 0 1rem;
+    color: var(--color-primary);
+}
+
+.portfolio__item-description {
+    color: var(--color-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.portfolio__item-cta {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    transition: background 0.3s;
+    gap: 1rem; /* Modern way to space items */
+    margin-top: auto; /* Ensures it stays at the bottom */
 }
 
-.portfolio__item-image h3, .portfolio__item-image p {
-    margin: 0;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.portfolio__item:hover .portfolio__item-image h3,
-.portfolio__item:hover .portfolio__item-image p {
-    opacity: 1;
-}
-
-.portfolio__item-buttons {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    background: #ffffff00;
-}
-
+/* Re-using your button styles, but can be defined globally */
 .btn {
-    margin: 0 10px;
-    padding: 12px 20px;
-    background: linear-gradient(90deg, #007bff, #0056b3);
-    color: white;
-    border: none;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s, transform 0.3s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.4rem;
+    border: 1px solid var(--color-primary);
+    transition: var(--transition);
+    font-weight: 500;
 }
 
 .btn:hover {
-    background: linear-gradient(90deg, #0056b3, #007bff);
-    transform: translateY(-2px);
+    background: var(--color-white);
+    color: var(--color-bg);
+    border-color: transparent;
 }
 
 .btn-primary {
-    background: linear-gradient(90deg, #28a745, #218838);
+    background: var(--color-primary);
+    color: var(--color-bg);
 }
 
-.btn-primary:hover {
-    background: linear-gradient(90deg, #218838, #28a745);
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .portfolio__item {
-        flex: 1 1 calc(100% - 20px);
+/* =================== MEDIA QUERIES (TABLETS) =================== */
+@media screen and (min-width: 600px) {
+    .portfolio__container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
+}
 
+/* =================== MEDIA QUERIES (DESKTOP) =================== */
+@media screen and (min-width: 1024px) {
+    .portfolio__container {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
     .portfolio__item-image {
         height: 200px;
     }
 }
 
-@media (max-width: 480px) {
-    .portfolio__item-image {
-        height: 180px;
-    }
-}
-
-.portfolio__item-description {
-    text-align: center;
-    margin: 10px 0;
-    font-size: 16px;
-    color: #333;
-}
-
-.portfolio__item-details {
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.9);
-    text-align: center;
-}
-
-.portfolio__item-description {
-    margin: 10px 0;
-    font-size: 16px;
-    color: #333;
-}
-
-.portfolio__item-buttons {
+.portfolio-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
-    padding: 10px 0;
+    align-items: center;
+    z-index: 1000;
+    padding: 2rem;
+}
+
+.portfolio-modal-content {
+    background: var(--color-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 1200px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.portfolio-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.portfolio-modal-close:hover {
+    color: var(--color-white);
+}
+
+.portfolio-modal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .portfolio-modal-content {
+        padding: 1.5rem;
+        width: 95%;
+    }
+    
+    .portfolio-modal-grid {
+        grid-template-columns: 1fr;
+    }
 }

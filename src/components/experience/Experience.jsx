@@ -74,6 +74,20 @@ const Exp = () => {
                             <small className='text-light'>Intermediate</small>
                             </div>
                         </article>
+                        <article className='experience__details'>
+                            <BsFillPatchCheckFill className='experience__details-icons'/>
+                            <div>
+                            <h5>Java Spring Boot</h5>
+                            <small className='text-light'>Intermediate</small>
+                            </div>
+                        </article>
+                        <article className='experience__details'>
+                            <BsFillPatchCheckFill className='experience__details-icons'/>
+                            <div>
+                            <h5>Elixir</h5>
+                            <small className='text-light'>Intermediate</small>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>

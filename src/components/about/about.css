@@ -11,7 +11,7 @@
     background: linear-gradient(45deg, transparent, var(--color-primary),transparent);
     display: grid;
     place-items: center;
-
+    text-align: justify;
 }
 
 .about__me-image{
@@ -73,6 +73,7 @@
 .about__content p{
     margin: 2rem 0 2.6rem;
     color: var(--color-light);
+    text-align: justify;
 }
 
 @media screen and (max-width: 1024px){
