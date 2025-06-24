@@ -42,7 +42,7 @@ const About = () => {
                         </article>
                     </div>
 
-                    <p>I'm a Full-Stack Developer driven by a single mission: transforming complex challenges into elegant, user-centric digital experiences. With a robust toolkit featuring Java, JavaScript, Python, React, java and Next.js, I don't just write code—I architect robust and scalable solutions. My philosophy is built on the foundation of clean, maintainable code, because I believe the best products are not only powerful on the outside but beautifully crafted on the inside. I thrive in collaborative settings where collective creativity turns ambitious ideas into reality. My curiosity doesn't stop when the workday ends; I'm constantly exploring new technologies, contributing to open-source, and connecting with the vibrant tech community.</p>
+                    <p>I'm a Full-Stack Developer driven by a single mission: transforming complex challenges into elegant, user-centric digital experiences. With a robust toolkit featuring JavaScript, Python, React, java and Next.js, I don't just write code—I architect robust and scalable solutions. My philosophy is built on the foundation of clean, maintainable code, because I believe the best products are not only powerful on the outside but beautifully crafted on the inside. I thrive in collaborative settings where collective creativity turns ambitious ideas into reality. My curiosity doesn't stop when the workday ends; I'm constantly exploring new technologies, contributing to open-source, and connecting with the vibrant tech community.</p>
 
                     <a href="#contact" className="btn btn-primary">Lets Talk</a>
                 </div>
